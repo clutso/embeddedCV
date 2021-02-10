@@ -12,8 +12,23 @@ The following code:
 
 - Grabs images and deliver to the respective endpoints (capure & stream) 
 
-## notes: 
-- Arduino IDE must comply with the following settings:
+## notes:
+ - For SW coding We are using _Arduino IDE_. 
+ 
+ - On _Arduino IDE_ Go to _**File --> Preferences --> Additional Boards Manager URLs:**_ and add : 
+  
+  ``` 
+  https://dl.espressif.com/dl/package_esp32_index.json
+   ```
+   
+ - Also in _Arduino IDE_ select _**Tools --> Board: "\<some board\>" --> Boards Manager**_ search and install :
+  
+  ```  
+  esp32
+  by Espressif Systems
+  ```
+  
+-  Under the _**Tools**_ menu select the following settings:
 
   ```
   - Board: ESP32 Wrover Module
@@ -23,12 +38,14 @@ The following code:
   - Partition Scheme: Huge APP (3MB no OTA/1MB SPIFFS)
   ```
   
-- Using: 
+- For HW we are Using: 
   
   ```
+  . ESP32 WroverI Module.
   - CAMERA_MODEL_AI_THINKER
   - 10348970
   ```
+  
 - You will need an FTDI module to upload your code. 
 - Instead of FTDI, You can upload your code using an arduino UNO with the following connection*:
   ```
@@ -39,4 +56,4 @@ The following code:
   TX    Arduino ------------- VOT Esp32CAM
   IO0   Esp32CAM ------------ GND Esp32CAM
   ```
-  *(**NOTE:**)For this to work you may need to: **1)** Press the reset button **2)** Upload the code **3)** Remove the jumper connected to IO0 **4)** Press the reset button
+  *(**NOTE:**)For this to work you may need to: **1)** Press the reset button **2)** Upload the code **3)** Remove the jumper connected to IO0 **4)** Press the reset button. Just keep on mind that the _IO0   Esp32CAM ------------ GND Esp32CAM_ connection sets the ESP32 on _Programming mode_
