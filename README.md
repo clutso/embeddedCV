@@ -17,19 +17,17 @@ The following code:
  
  - On _Arduino IDE_ Go to _**File --> Preferences --> Additional Boards Manager URLs:**_ and add : 
   
-  ``` 
+  ```
   https://dl.espressif.com/dl/package_esp32_index.json
-   ```
+  ```
    
  - Also in _Arduino IDE_ select _**Tools --> Board: "\<some board\>" --> Boards Manager**_ search and install :
-  
   ```  
   esp32
   by Espressif Systems
   ```
   
 -  Under the _**Tools**_ menu select the following settings:
-
   ```
   - Board: ESP32 Wrover Module
   - Upload Speed: 115200
@@ -39,7 +37,6 @@ The following code:
   ```
   
 - For HW we are Using: 
-  
   ```
   . ESP32 WroverI Module.
   - CAMERA_MODEL_AI_THINKER
@@ -56,4 +53,4 @@ The following code:
   TX    Arduino ------------- VOT Esp32CAM
   IO0   Esp32CAM ------------ GND Esp32CAM
   ```
-  *(**NOTE:**)For this to work you may need to: **1)** Press the reset button **2)** Upload the code **3)** Remove the jumper connected to IO0 **4)** Press the reset button. Just keep on mind that the _IO0   Esp32CAM ------------ GND Esp32CAM_ connection sets the ESP32 on _Programming mode_
+  *(**NOTE:**)For this to work you may need to: **1)** Press the reset button **2)** Upload the code **3)** Remove the jumper connected to IO0 **4)** Press the reset button. Just keep on mind that the _IO0   Esp32CAM ------------ GND Esp32CAM_ connection sets the ESP32 on _Programming mode_.
