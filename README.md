@@ -29,4 +29,14 @@ The following code:
   - CAMERA_MODEL_AI_THINKER
   - 10348970
   ```
-  
+- You will need an FTDI module to upload your code. 
+- Instead of FTDI, You can upload your code using an arduino UNO with the following connection*:
+  ```
+  RESET Arduino ------------- GND Ardunio 
+  3.3   Arduino ------------- 3v  Esp32CAM 
+  GND   Arduino ------------- GND Esp32CAM
+  RX    Arduino ------------- VOR Esp32CAM (this is not a mistake RX to rx & TX to tx)
+  TX    Arduino ------------- VOT Esp32CAM
+  IO0   Esp32CAM ------------ GND Esp32CAM
+  ```
+  *(**NOTE:**)For this to work you may need to: **1)** Press the reset button **2)** Upload the code **3)** Remove the jumper connected to IO0 **4)** Press the reset button
